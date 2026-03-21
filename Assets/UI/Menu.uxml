@@ -1,0 +1,12 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Menu.uss?fileID=7433441132597879392&amp;guid=fc64c61aeefcacb45b32254cedc8089d&amp;type=3#Menu"/>
+    <ui:VisualElement name="Menu" class="menu" style="flex-grow: 1;">
+        <ui:Label text="Tarea Unity" class="titulo"/>
+        <ui:VisualElement name="Botones" class="botones" style="flex-grow: 1;">
+            <ui:Button text="Jugar&#10;" name="Jugar" class="boton-juego"/>
+            <ui:Button text="Ayuda" name="Ayuda" class="boton-juego"/>
+            <ui:Button text="Creditos" name="Creditos" class="boton-juego"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:Label text="Lorena Antonio Monraga" emoji-fallback-support="false" class="creditos"/>
+</ui:UXML>

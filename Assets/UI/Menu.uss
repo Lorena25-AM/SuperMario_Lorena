@@ -1,0 +1,23 @@
+VisualElement {
+}
+
+.menu {
+}
+
+.titulo {
+}
+
+.botones {
+}
+
+.boton-juego {
+}
+
+.boton-juego:hover {
+}
+
+.boton-juego:active {
+}
+
+.creditos {
+}
