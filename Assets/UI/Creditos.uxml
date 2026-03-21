@@ -1,0 +1,12 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Creditos.uss?fileID=7433441132597879392&amp;guid=091d68ad495c1454e9d923248823a9b1&amp;type=3#Creditos"/>
+    <ui:VisualElement name="Menu" class="menu-creditos" style="flex-grow: 1; background-color: rgb(61, 12, 12);">
+        <ui:VisualElement name="Fondo" class="fondo-creditos" style="flex-grow: 1; width: auto; height: auto; background-color: rgb(74, 17, 17);">
+            <ui:VisualElement name="Subtitulo" class="subtitulo-creditos" style="flex-grow: 1;">
+                <ui:Label text="Créditos" name="TextoCreditos"/>
+            </ui:VisualElement>
+            <ui:Label text="Tarea Unity&#10;&#10;Desarrollado por:&#10;Lorena Antonio Monraga&#10;&#10;Diseño de interfaz:&#10;Lorena Antonio Monraga&#10;&#10;Programación:&#10;Lorena Antonio Monraga&#10;&#10;Gracias por jugar" name="TextoCreditos" class="texto-creditos"/>
+            <ui:Button text="" name="Cerrar" class="cerrar-creditos"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

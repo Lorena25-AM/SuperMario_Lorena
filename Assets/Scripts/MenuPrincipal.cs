@@ -11,24 +11,24 @@ public class MenuPrincipal : MonoBehaviour
         Button jugar = root.Q<Button>("Jugar");
         Button ayuda = root.Q<Button>("Ayuda");
         Button creditos = root.Q<Button>("Creditos");
+        Button salir = root.Q<Button>("Salir");
 
-        jugar.clicked += IrAJuego;
-        ayuda.clicked += IrAAyuda;
-        creditos.clicked += IrACreditos;
+        if (jugar != null)
+            jugar.clicked += () => SceneManager.LoadScene("Juego_Mario");
+
+        if (ayuda != null)
+            ayuda.clicked += () => SceneManager.LoadScene("Ayuda");
+
+        if (creditos != null)
+            creditos.clicked += () => SceneManager.LoadScene("Creditos");
+
+        if (salir != null)
+            salir.clicked += SalirDelJuego;
     }
 
-    void IrAJuego()
+    void SalirDelJuego()
     {
-        SceneManager.LoadScene("Juego");
-    }
-
-    void IrAAyuda()
-    {
-        SceneManager.LoadScene("Ayuda");
-    }
-
-    void IrACreditos()
-    {
-        SceneManager.LoadScene("Creditos");
+        Application.Quit();
+        Debug.Log("Salir del juego");
     }
 }
