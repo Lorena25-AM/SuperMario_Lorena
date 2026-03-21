@@ -1,12 +1,17 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/Menu.uss?fileID=7433441132597879392&amp;guid=fc64c61aeefcacb45b32254cedc8089d&amp;type=3#Menu"/>
     <ui:VisualElement name="Menu" class="menu" style="flex-grow: 1;">
-        <ui:Label text="Tarea Unity" class="titulo"/>
-        <ui:VisualElement name="Botones" class="botones" style="flex-grow: 1;">
-            <ui:Button text="Jugar&#10;" name="Jugar" class="boton-juego"/>
-            <ui:Button text="Ayuda" name="Ayuda" class="boton-juego"/>
-            <ui:Button text="Creditos" name="Creditos" class="boton-juego"/>
+        <ui:VisualElement name="Panel" class="panel" style="flex-grow: 1; height: 1000px;">
+            <ui:VisualElement name="BarraTitulo" class="barra-titulo" style="flex-grow: 1; min-width: auto; aspect-ratio: auto; max-height: 100px; background-color: rgba(70, 82, 149, 0.76);">
+                <ui:Label text="Tarea Unity" name="Titulo" class="titulo" style="height: 232px; width: 513px; font-size: 70px;"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="Botones" class="botones" style="flex-grow: 1; height: 80px; width: 1200px; background-color: rgba(47, 56, 105, 0.65); border-top-left-radius: 80px; border-top-right-radius: 80px; border-bottom-right-radius: 80px; border-bottom-left-radius: 80px;">
+                <ui:Button text="Jugar&#10;" name="Jugar" class="boton-juego" style="width: 300px;"/>
+                <ui:Button text="Ayuda" name="Ayuda" class="boton-juego"/>
+                <ui:Button text="Créditos" name="Creditos" class="boton-juego"/>
+            </ui:VisualElement>
+            <ui:Label text="Lorena Antonio Monraga (A01801978)" name="Nombre" class="creditos"/>
+            <ui:Button text="" name="Regresar" class="regresar"/>
         </ui:VisualElement>
     </ui:VisualElement>
-    <ui:Label text="Lorena Antonio Monraga" emoji-fallback-support="false" class="creditos"/>
 </ui:UXML>
