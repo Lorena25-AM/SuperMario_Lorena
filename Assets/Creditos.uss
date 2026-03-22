@@ -3,15 +3,16 @@
 
 .menu-creditos {
     flex-grow: 1;
-    background-color: rgb(134, 56, 56);
+    background-color: rgb(238, 238, 238);
 }
 
 .fondo-creditos {
+    flex-grow: 1;
 }
 
 .subtitulo-creditos {
     position: absolute;
-    top: 40px;
+    top: auto;
     left: 0;
     right: 0;
     font-size: 50px;
@@ -24,12 +25,15 @@
 .texto-creditos {
     position: absolute;
     left: 23%;
-    top: 20%;
+    top: auto;
     -unity-text-align: upper-center;
-    font-size: 80px;
+    font-size: 50px;
     color: rgb(186, 152, 87);
     -unity-font-style: bold;
     align-items: stretch;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
 }
 
 .cerrar-creditos {
@@ -47,5 +51,3 @@
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
 }
-
-

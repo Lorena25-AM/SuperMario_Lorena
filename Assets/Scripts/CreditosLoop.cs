@@ -4,26 +4,21 @@ using UnityEngine.SceneManagement;
 
 public class CreditosLoop : MonoBehaviour
 {
-    public float velocidad = 30f;
+    public float velocidad = 32f;
 
-    private Label textoCreditos;
+    private VisualElement scrollCreditos;
     private Button cerrar;
 
-    private float posicionInicial;
-    private float posicionFinal = -600f;
+    private float posicionY;
+    private float posicionInicialY;
+    private float posicionFinalY;
 
     void Start()
     {
         var root = GetComponent<UIDocument>().rootVisualElement;
 
-        textoCreditos = root.Q<Label>("TextoCreditos");
+        scrollCreditos = root.Q<VisualElement>("ScrollCreditos");
         cerrar = root.Q<Button>("Cerrar");
-
-        if (textoCreditos != null)
-        {
-            posicionInicial = Screen.height;
-            textoCreditos.style.top = posicionInicial;
-        }
 
         if (cerrar != null)
         {
@@ -32,20 +27,39 @@ public class CreditosLoop : MonoBehaviour
                 SceneManager.LoadScene("Menu");
             };
         }
+
+        if (scrollCreditos != null)
+        {
+            scrollCreditos.style.position = Position.Absolute;
+            scrollCreditos.style.left = 0;
+            scrollCreditos.style.right = 0;
+
+            root.schedule.Execute(() =>
+            {
+                // Donde empieza (tu posición actual)
+                posicionInicialY = scrollCreditos.resolvedStyle.top;
+
+                // Cuando ya desapareció completamente arriba
+                posicionFinalY = -scrollCreditos.layout.height - 50f;
+
+                posicionY = posicionInicialY;
+            }).StartingIn(200);
+        }
     }
 
     void Update()
     {
-        if (textoCreditos == null) return;
+        if (scrollCreditos == null) return;
+        if (scrollCreditos.layout.height <= 0) return;
 
-        float topActual = textoCreditos.resolvedStyle.top;
-        float nuevoTop = topActual - velocidad * Time.deltaTime;
+        posicionY -= velocidad * Time.deltaTime;
+        scrollCreditos.style.top = posicionY;
 
-        if (nuevoTop < posicionFinal)
+        // Cuando desaparece arriba → vuelve al inicio
+        if (posicionY < posicionFinalY)
         {
-            nuevoTop = posicionInicial;
+            posicionY = posicionInicialY;
+            scrollCreditos.style.top = posicionY;
         }
-
-        textoCreditos.style.top = nuevoTop;
     }
 }
