@@ -1,7 +1,7 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/Menu.uss?fileID=7433441132597879392&amp;guid=fc64c61aeefcacb45b32254cedc8089d&amp;type=3#Menu"/>
-    <ui:VisualElement name="Menu" class="menu" style="flex-grow: 1;">
-        <ui:VisualElement name="Panel" class="panel" style="flex-grow: 1; height: 1000px;">
+    <ui:VisualElement name="Menu" class="menu" style="flex-grow: 1; background-color: rgba(58, 92, 159, 0); border-top-left-radius: 100px; border-bottom-left-radius: 100px; border-top-right-radius: 100px; border-bottom-right-radius: 100px; width: 1916px; background-size: 100% 100%;">
+        <ui:VisualElement name="Panel" class="panel" style="flex-grow: 1; height: 1000px; background-color: rgba(105, 87, 235, 0); width: 1820px;">
             <ui:VisualElement name="BarraTitulo" class="barra-titulo" style="flex-grow: 1; min-width: auto; aspect-ratio: auto; max-height: 100px; background-color: rgba(70, 82, 149, 0.76);">
                 <ui:Label text="Tarea Unity" name="Titulo" class="titulo" style="height: 232px; width: 513px; font-size: 70px;"/>
             </ui:VisualElement>
